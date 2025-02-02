@@ -30,40 +30,28 @@
         }
         .header-colour{
           background: linear-gradient( rgb(255, 255, 255),rgb(239, 235, 227) 100%);
-        }
-        .service-heading{
-          margin-left: 130px;
-        }
-        .card-container{
-          display: flex;
-          justify-content: center;
-          gap: 20px;
-          margin-top: 20px;
-        }
+        }     
         .service-card {
             background-color: #f2ede4;
             padding: 20px;
             border-radius: 10px;
             text-align: center;
             box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-            width: 400px;
-            height: 340px;
+            max-width: 420px;
+            height: 380px;           
         }
-
         .service-card img {
             border-radius: 100px;
             background-color: white;
             padding: 24px;
-            width: 140px;
-            height: 140px;
+            width: 120px;
+            height: 120px;
         }
-
         .service-card h3 {
             font-size: 18px;
-            margin-top: 20px;
             font-weight: bold;
+            margin: 40px 0 40px 0;
         }
-
         .service-card p {
             font-size: 14px;
             color: #666;
@@ -75,28 +63,28 @@
     <!-- header section -->
      <header class= "header-colour mt-8"> 
       <!-- navbar -->
-        <div class="lg:flex mx-10">
-          <div>
-            <img class="lg:flex-1 w-36" src="c2-assets/logo-header.png" alt="">
-            <img class="lg:hidden w-24" src="c2-assets/nature.PNG" alt="">
-          </div>
-          <div class="hidden lg:flex w-2/6 mr-24 mx-auto">
-            <ul class="menu menu-horizontal px-1">
+        <nav class="md:container mx-auto lg:flex justify-between">
+            <img class="hidden md:hidden lg:flex" src="c2-assets/logo-header.png" alt="">
+            <div class="flex justify-between mx-auto my-10">
+              <img class="w-24 lg:hidden" src="c2-assets/nature.PNG" alt="">
+              <i class="text-green-600 mx-8 text-3xl mt-7 lg:hidden fa-solid fa-bars"></i>
+            </div>
+            <hr class=" border-green-600 lg:hidden">
+          <div class="hidden lg:flex mx-auto pl-24">
+            <ul class="menu menu-horizontal">
               <li><a href="">Product</a></li>
               <li><a href="">Services</a></li>
               <li><a href="">Contact us</a></li>
             </ul>
           </div>
-          <div class="hidden lg:flex gap-4 mt-4 w-16">
-            <i class="fa-solid fa-magnifying-glass"></i>
-            <i class="fa-solid fa-bars"></i>
-          </div>
-          <div class="hidden lg:flex gap-4">
+          <div class="hidden lg:flex gap-5">
+            <i class="fa-solid fa-magnifying-glass mt-4"></i>
+            <i class="fa-solid fa-bars mt-4"></i>
             <a class="btn border-green-600 bg-white">Login</a>
             <a class="btn bg-btn-primary text-white">Button</a>
           </div>
-        </div>
-        <!-- banner -->
+        </nav>
+      <!-- banner -->
         <div class="lg:flex-row mx-auto">
           <h1 class="lg:mt-24 text-6xl text-center font-semibold leading-normal">Freshness <span class="text-green-600">You Can <br>
             Count</span> On, Prices You’ll Love!</h1>
@@ -109,9 +97,9 @@
      <!-- main section -->
       <main class="my-20">
         <!-- service-section -->
-         <div class="mx-auto">
-          <h1 class="text-green-600 service-heading lg:mt-24 text-5xl text-left font-semibold">Services</h1>
-         <div class="card-container">
+        <section class="lg:container mx-auto">
+          <h1 class=" text-green-600 text-5xl mx-4 font-semibold my-4">Services</h1>
+         <div class="grid grid-cols-1 gap-8 mx-4 md:grid-cols-2 lg:grid-cols-3 gap-x-10 overflow-hidden">  
           <div class="service-card">
             <img class="mx-auto" src="c2-assets/service.png" alt="">
             <h3>24/7 Services </h3>
@@ -129,7 +117,15 @@
             </p>
           </div>
          </div>
-         </div>
+        </section>
+        <!-- product -->
+        <section class="products">
+          <h1></h1>
+          <div class="product-card-container">
+            <div ></div>
+            <div></div>
+          </div>
+         </section>
       </main>
       <!-- footer section -->
        <footer>
